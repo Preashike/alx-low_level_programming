@@ -1,25 +1,21 @@
 #include "main.h"
 
 /**
- * more_numbers - 10x 0 to 14
+ * print_most_numbers - numbers from 0 to 9
  *
  * Return: void
  */
 
-void more_numbers(void)
+void print_most_numbers(void)
 {
-	int i, j;
+	int i;
 
 	for (i = 0; i < 10; i++)
 	{
-		for (j = 0; j < 15; j++)
+		if (i != 2 && i != 4)
 		{
-			if (j / 10)
-			{
-				_putchar(j / 10 + 48);
-			}
-			_putchar(j % 10 + 48);
+			_putchar(48 + i);
 		}
-		_putchar('\n');
 	}
+	_putchar('\n');
 }
