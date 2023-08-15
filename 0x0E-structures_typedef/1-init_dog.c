@@ -3,12 +3,10 @@
 /**
  * init_dog - initialize struct dog
  *
- * @d: param of struct dog type
- * @name: name of dog
- * @age: age of dog
- * @owner: dog owner
- *
- * Return: nothing
+ * @d: parameter of struct dog type
+ * @name: pointer to a char
+ * @age: dog age
+ * @owner: pointer to a char parameter
  */
 
 

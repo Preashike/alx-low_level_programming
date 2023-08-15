@@ -1,28 +1,26 @@
-#include "dog.h"
-#include <stdio.h>
-#include <stdlib.h>
+#ifndef _DOG_H_
+#define _DOG_H_
 
 /**
- * struct dog - print a struct dog
+ * struct dog - new type definition
  *
- * @name: print dog name
- * age: dog age
- * @owner: owner of dog
+ * @name: first dog name
+ * @age: second dog age
+ * @owner: last owner name
  */
-void print_dog(struct dog *d)
+
+struct dog
 {
-	if(d == NULL)
-		return;
-	if(d->name == NULL)
-		printf("Name: (nil)\n");
-	else
-		printf("Name: %s\n",d->name);
-	if(d->age < 0)
-		printf("Age:(nil)\n");
-	else
-		printf("Age: %f\n",d->age);
-	if(d->owner == NULL)
-		printf("Owner:(nil)\n");
-	else
-		printf("Owner:%s\n",d->owner);
-}
+	char *name;
+	float age;
+	char *owner;
+};
+
+void init_dog(struct dog *d, char *name, float age, char *owner);
+void print_dog(struct dog *d);
+
+typedef struct dog dog_t;
+dog_t *new_dog(char *name, float age, char *owner);
+void free_dog(dog_t *d);
+
+#endif
