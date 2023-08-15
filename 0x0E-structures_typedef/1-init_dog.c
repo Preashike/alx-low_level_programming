@@ -1,22 +1,23 @@
 #include "dog.h"
-#include <stdlib.h>
 
 /**
  * init_dog - initialize struct dog
  *
- * @d: parameter of struct dog type
- * @name: name of the dog
- * @age: dog age
- * @owner: pointer to a char parameter
+ * @d: param of struct dog type
+ * @name: name of dog
+ * @age: age of dog
+ * @owner: dog owner
+ *
+ * Return: nothing
  */
 
 
 void init_dog(struct dog *d, char *name, float age, char *owner)
 {
-	if (d != NULL)
+	if (d)
 	{
-		d->name = name;
-		d->age = age;
-		d->owner = owner;
+		(*d).name = name;
+		(*d).age = age;
+		(*d).owner = owner;
 	}
 }
